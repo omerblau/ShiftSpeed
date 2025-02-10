@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>SpeedShift</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto:400,500"
+        />
+    </head>
+    <body>
+        <div id="header">
+            <img
+                id="logo"
+                src="assets/little_logo_no_background.png"
+                alt="SpeedShift logo"
+            />
+            <h1>SpeedShift</h1>
+        </div>
+        <div id="currentSpeedDisplay">
+            Current Speed: <span id="currentSpeed">1x</span>
+        </div>
+        <div id="sliderContainer">
+            <input
+                type="range"
+                id="speedSlider"
+                min="0.1"
+                max="10"
+                step="0.1"
+                value="1"
+            />
+        </div>
+        <div id="manualControl">
+            <input type="number" id="speedInput" step="0.1" value="1" />
+            <button id="setSpeed">Set Speed</button>
+        </div>
+        <div id="presets">
+            <div class="preset-grid">
+                <button class="preset" data-speed="0.25">.25x</button>
+                <button class="preset" data-speed="0.5">.50x</button>
+                <button class="preset" data-speed="0.75">.75x</button>
+                <button class="preset" data-speed="1">1x</button>
+                <button class="preset" data-speed="1.25">1.25x</button>
+                <button class="preset" data-speed="1.5">1.50x</button>
+                <button class="preset" data-speed="1.75">1.75x</button>
+                <button class="preset" data-speed="2">2x</button>
+                <button class="preset" data-speed="2.25">2.25x</button>
+                <button class="preset" data-speed="2.5">2.50x</button>
+                <button class="preset" data-speed="2.75">2.75x</button>
+                <button class="preset" data-speed="3">3x</button>
+                <button class="preset" data-speed="4">4x</button>
+                <button class="preset" data-speed="5">5x</button>
+                <button class="preset" data-speed="6">6x</button>
+                <button class="preset" data-speed="10">10x</button>
+            </div>
+        </div>
+        <div id="status"></div>
+        <script src="js/popup.js"></script>
+    </body>
+</html>

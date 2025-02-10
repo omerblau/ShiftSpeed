@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "SpeedShift",
+  "version": "1.2",
+  "description": "Control video playback speed.",
+  "icons": {
+    "16": "assets/little_logo_no_background.png",
+    "48": "assets/little_logo_no_background.png",
+    "128": "assets/little_logo_no_background.png"
+  },
+  "permissions": ["scripting", "activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SpeedShift"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

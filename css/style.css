@@ -1,0 +1,132 @@
+/* CSS Variables for easy theming */
+:root {
+    --primary-color: #4285f4;
+    --primary-color-hover: #3367d6;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --border-color: #ddd;
+    --button-bg: #f4f4f4;
+    --button-hover-bg: #ddd;
+    --font-family: "Roboto", sans-serif;
+}
+
+/* Base styling */
+body {
+    font-family: var(--font-family);
+    background: var(--background-color);
+    color: var(--text-color);
+    padding: 15px;
+    width: 280px;
+    margin: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header: logo and title aligned to the left */
+#header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    transform: scale(1.3);
+    transform-origin: left center;
+}
+#logo {
+    width: 25px;
+    margin-right: 8px;
+}
+#header h1 {
+    font-size: 18px;
+    margin: 0;
+    text-align: left;
+}
+
+/* Current speed display */
+#currentSpeedDisplay {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0 12px;
+}
+#currentSpeedDisplay #currentSpeed {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+/* Slider container */
+#sliderContainer {
+    margin-bottom: 12px;
+}
+input[type="range"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Manual control: number input and set button on the same row */
+#manualControl {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+#manualControl input[type="number"] {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#manualControl button {
+    padding: 8px 12px;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#manualControl button:hover {
+    background: var(--primary-color-hover);
+}
+
+/* Presets area */
+#presets {
+    margin-bottom: 12px;
+}
+#presets p {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* Grid for preset buttons: 4 buttons per row */
+.preset-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+.preset-grid button {
+    padding: 8px;
+    background: var(--button-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+.preset-grid button:hover {
+    background: var(--button-hover-bg);
+}
+
+/* Status message styling */
+#status {
+    height: 18px;
+    line-height: 18px;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    margin-top: 4px;
+}
